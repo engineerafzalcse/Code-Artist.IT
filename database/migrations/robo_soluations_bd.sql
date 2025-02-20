@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 20, 2025 at 10:31 AM
+-- Generation Time: Jan 29, 2025 at 11:10 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.0.30
 
@@ -43,7 +43,8 @@ INSERT INTO `banners` (`id`, `banner_img`, `status`, `created_at`, `updated_at`)
 (4, 'backend/image/banner/678b763282878.png', '1', '2025-01-18 03:36:50', '2025-01-18 04:09:22'),
 (5, 'backend/image/banner/678b768e049de.jpeg', '1', '2025-01-18 03:38:22', '2025-01-18 04:09:20'),
 (6, 'backend/image/banner/678db81abb54e.png', '1', '2025-01-19 20:42:35', '2025-01-19 20:42:35'),
-(7, 'backend/image/banner/678e1bd05c9e0.png', '1', '2025-01-20 03:48:01', '2025-01-20 03:48:01');
+(7, 'backend/image/banner/678e1bd05c9e0.png', '1', '2025-01-20 03:48:01', '2025-01-20 03:48:01'),
+(13, 'backend/image/banner/6796318664d42.png', '1', '2025-01-26 06:58:46', '2025-01-26 06:58:46');
 
 -- --------------------------------------------------------
 
@@ -132,6 +133,29 @@ INSERT INTO `client__feedback` (`id`, `client_img`, `name`, `designation`, `desc
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '1',
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '1',
+  `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '1',
+  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `subject`, `message`, `created_at`, `updated_at`) VALUES
+(2, 'Md.Afzal Hossen', 'afzalbhola07@gmail.com', 'Bangla 1', 'dasfas', '2025-01-29 15:37:38', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `development__software`
 --
 
@@ -176,6 +200,32 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `faqs`
+--
+
+CREATE TABLE `faqs` (
+  `id` bigint UNSIGNED NOT NULL,
+  `faq_questions` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `faq_answers` text COLLATE utf8mb4_unicode_ci,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `faq_questions`, `faq_answers`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'What factors should I consider when purchasing homeowners insurance?', 'Consider coverage limits, deductibles, policy types, and exclusions.', '1', '2025-01-29 16:33:39', '2025-01-29 16:51:22'),
+(2, 'Where and when is my personal property covered?', 'Personal property is usually covered at home and while traveling, subject to policy terms.', '1', '2025-01-29 16:36:22', '2025-01-29 16:51:21'),
+(3, 'Do I need earthquake coverage? How can I get it?', 'Earthquake coverage is typically not included in standard policies but can be added separately.', '1', '2025-01-29 16:36:48', '2025-01-29 16:51:19'),
+(4, 'What does homeowners insurance cover?', 'Covers damage to home, personal property, and liability protection.', '1', '2025-01-29 16:37:11', '2025-01-29 16:51:17'),
+(5, 'What are the policy limits in the standard homeowners policy?', 'Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.Standard policies have different limits for dwelling, personal property, and liability.', '1', '2025-01-29 16:37:31', '2025-01-29 16:51:15');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `innovative__products`
 --
 
@@ -196,7 +246,8 @@ CREATE TABLE `innovative__products` (
 INSERT INTO `innovative__products` (`id`, `products_img`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
 (2, 'backend/image/innovative/67863b77aadbf.png', 'Possimus ut sed velit assumenda', 'Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.', '1', '2025-01-14 04:24:56', '2025-01-18 06:35:59'),
 (3, 'backend/image/innovative/678ba05422a3a.jpg', 'asdfasdasdff', 'asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa asdfasfsa', '1', '2025-01-18 06:36:36', '2025-01-18 06:36:36'),
-(4, 'backend/image/innovative/678e1f30e68eb.png', 'asdfsa', 'asdfsafsa', '1', '2025-01-20 04:02:25', '2025-01-20 04:02:25');
+(4, 'backend/image/innovative/678e1f30e68eb.png', 'asdfsa', 'asdfsafsa', '1', '2025-01-20 04:02:25', '2025-01-20 04:02:25'),
+(5, 'backend/image/innovative/678e1f30e68eb.png', 'asdfsa', 'asdfsafsa', '1', '2025-01-20 04:02:25', '2025-01-20 04:02:25');
 
 -- --------------------------------------------------------
 
@@ -234,7 +285,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2025_01_10_085909_create_website_settings_table', 16),
 (21, '2025_01_09_125440_create_our__timelines_table', 17),
 (22, '2025_01_09_133007_create_development__software_table', 18),
-(24, '2025_01_16_084858_create_people__panels_table', 19);
+(24, '2025_01_16_084858_create_people__panels_table', 19),
+(25, '2025_01_28_063523_create_contacts_table', 20),
+(26, '2025_01_29_214135_create_faqs_table', 21);
 
 -- --------------------------------------------------------
 
@@ -256,7 +309,8 @@ CREATE TABLE `notices` (
 --
 
 INSERT INTO `notices` (`id`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'asdfasfs', 'asdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdf', '1', '2025-01-16 00:53:40', '2025-01-16 00:56:18');
+(1, 'asdfasfs', 'asdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdfasdfasfsafsafasf asdf', '1', '2025-01-16 00:53:40', '2025-01-16 00:56:18'),
+(3, 'dsfafafdasfasfsafsafsafasfsafsaf', 'dsfa', '1', '2025-01-25 19:06:23', '2025-01-25 19:06:23');
 
 -- --------------------------------------------------------
 
@@ -357,9 +411,9 @@ CREATE TABLE `people__panels` (
 --
 
 INSERT INTO `people__panels` (`id`, `name`, `image`, `designation`, `people_anel`, `facebook`, `linkdin`, `instragram`, `website`, `status`, `created_at`, `updated_at`) VALUES
-(4, 'afzal-swe', 'backend/image/people/678dafc9eb9ad.png', 'cse', '2', NULL, NULL, NULL, NULL, '1', '2025-01-19 20:07:06', '2025-01-19 20:28:50'),
-(5, 'Md.Afzal Hossen', 'backend/image/people/678db0987c682.png', 'cse', '2', NULL, NULL, NULL, NULL, '1', '2025-01-19 20:10:32', '2025-01-19 20:28:52'),
-(6, 'afzal-swe', 'backend/image/people/678db0a9bbff0.png', 'cse', '2', 'https://www.facebook.com', NULL, NULL, NULL, '1', '2025-01-19 20:10:49', '2025-01-19 20:28:54'),
+(4, 'afzal-swe', 'backend/image/people/678dafc9eb9ad.png', 'cse', '2', NULL, NULL, NULL, NULL, '0', '2025-01-19 20:07:06', '2025-01-25 21:53:37'),
+(5, 'Md.Afzal Hossen', 'backend/image/people/678db0987c682.png', 'cse', '2', NULL, NULL, NULL, NULL, '1', '2025-01-19 20:10:32', '2025-01-25 22:35:58'),
+(6, 'afzal-swe', 'backend/image/people/678db0a9bbff0.png', 'cse', '2', 'https://www.facebook.com', NULL, NULL, NULL, '1', '2025-01-19 20:10:49', '2025-01-25 22:35:53'),
 (7, 'Md.Afzal Hossen', 'backend/image/people/678e23fc867d0.png', 'cse', '2', NULL, NULL, NULL, NULL, '1', '2025-01-20 04:22:52', '2025-01-20 04:22:52');
 
 -- --------------------------------------------------------
@@ -451,7 +505,11 @@ CREATE TABLE `sister__concerns` (
 --
 
 INSERT INTO `sister__concerns` (`id`, `icon`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(3, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24');
+(3, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24'),
+(6, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24'),
+(7, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24'),
+(8, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24'),
+(9, 'fa-solid fa-mountain-city', 'asdf asdf asdf dasf dsafas adsfas sadfas asdf asdfa adf adsf', 'Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.', '1', '2025-01-18 07:13:38', '2025-01-18 07:25:24');
 
 -- --------------------------------------------------------
 
@@ -528,7 +586,7 @@ CREATE TABLE `website_settings` (
 --
 
 INSERT INTO `website_settings` (`id`, `website_name`, `currency`, `phone_one`, `phone_two`, `main_email`, `support_email`, `logo`, `favicon`, `address`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'ROBO SOLUTIONS BD', NULL, '01701558100', '01701558100', 'robosolutionsbd@gmail.com', 'info.robosolutionbd@gmail.com', 'backend/image/website/logo/robo-solutions-bd.png', 'backend/image/website/favicon/robo-solutions-bd.png', 'In Front of DIU Gate-3, Dattapara, Birulia-1216, Savar, Dhaka, Banaladesh.', 'aaaaaaaaaaaa', '2025-01-20 04:20:46', '2025-01-20 04:20:46');
+(1, 'ROBO SOLUTIONS BD', NULL, '01701558100', '01701558100', 'robosolutionsbd@gmail.com', 'info.robosolutionbd@gmail.com', 'backend/image/website/logo/robo-solutions-bd.png', 'backend/image/website/favicon/robo-solutions-bd.png', 'In Front of DIU Gate-3, Dattapara, Birulia-1216, Savar, Dhaka, Banaladesh.', 'aaaaaaaaaaaa', '2025-01-25 18:26:49', '2025-01-25 18:26:49');
 
 -- --------------------------------------------------------
 
@@ -586,6 +644,12 @@ ALTER TABLE `client__feedback`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `development__software`
 --
 ALTER TABLE `development__software`
@@ -597,6 +661,12 @@ ALTER TABLE `development__software`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `innovative__products`
@@ -699,7 +769,7 @@ ALTER TABLE `we__haves`
 -- AUTO_INCREMENT for table `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -717,7 +787,13 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `client__feedback`
 --
 ALTER TABLE `client__feedback`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `development__software`
@@ -732,22 +808,28 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `innovative__products`
 --
 ALTER TABLE `innovative__products`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `notices`
 --
 ALTER TABLE `notices`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `our__expartics`
@@ -765,7 +847,7 @@ ALTER TABLE `our__timelines`
 -- AUTO_INCREMENT for table `people__panels`
 --
 ALTER TABLE `people__panels`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -789,7 +871,7 @@ ALTER TABLE `service__areas`
 -- AUTO_INCREMENT for table `sister__concerns`
 --
 ALTER TABLE `sister__concerns`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `socials`

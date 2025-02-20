@@ -13,7 +13,7 @@ class FaqController extends Controller
 
     public function Faq_View()
     {
-        $faq_view = Faq::orderBy('id', 'DESC')->get();
+        $faq_view = Faq::all();
 
         return view('backend.pages.settings.faq.faq_view', compact('faq_view'));
     } //end

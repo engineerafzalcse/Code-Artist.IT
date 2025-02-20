@@ -39,7 +39,7 @@
               <a href="{{$row->linkdin ?? '#'}}"><i class="bi bi-linkedin"></i></a>
               <a href="{{$row->facebook ?? '#'}}"><i class="bi bi-facebook"></i></a>
               <a href="{{$row->instragram ?? '#'}}"><i class="bi bi-instagram"></i></a>
-              <a href="{{$row->github ?? '#'}}"><i class="bi bi-github"></i></a>
+              <a href="{{$row->git ?? '#'}}"><i class="bi bi-github"></i></a>
               <a href="{{$row->website ?? '#'}}"><i class="fa-solid fa-globe"></i></a>
             </div>
           </div>

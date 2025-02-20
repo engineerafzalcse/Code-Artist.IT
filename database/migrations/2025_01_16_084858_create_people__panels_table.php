@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('facebook')->nullable()->default();
             $table->string('linkdin')->nullable()->default();
             $table->string('instragram')->nullable()->default();
+            $table->string('git')->nullable()->default();
             $table->string('website')->nullable()->default();
             $table->string('status')->nullable()->default(0);
             $table->timestamps();

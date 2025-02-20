@@ -45,6 +45,7 @@ class PeoplePanelController extends Controller
                 'facebook' => $request->facebook,
                 'linkdin' => $request->linkdin,
                 'instragram' => $request->instragram,
+                'git' => $request->git,
                 'website' => $request->website,
                 'status' => $request->status,
                 'image' => "backend/image/people/" . $name_gen,

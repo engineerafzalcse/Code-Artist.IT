@@ -50,6 +50,7 @@ $table->string('intern')->nullable()->default(4); --}}
                                     <th>People Panel</th>
                                     <th>FB Link</th>
                                     <th>Linkedin Link</th>
+                                    <th>Git Link</th>
                                     <th>Instragram Link</th>
                                     <th>website Link</th>
                                     <th>Status</th>
@@ -90,6 +91,13 @@ $table->string('intern')->nullable()->default(4); --}}
                                         </td>
                                         <td>
                                           @if ($row->linkdin)
+                                          <p class="text-success" style="width:100px;"> Active </p>
+                                          @else
+                                          <p class="text-danger" style="width:100px;"> Null </p>
+                                          @endif
+                                        </td>
+                                        <td>
+                                          @if ($row->git)
                                           <p class="text-success" style="width:100px;"> Active </p>
                                           @else
                                           <p class="text-danger" style="width:100px;"> Null </p>
@@ -201,6 +209,11 @@ $table->string('intern')->nullable()->default(4); --}}
                         <div class="form-group">
                           <label for="">Linkdin</label>
                           <input type="text" name="linkdin" class="form-control" value="{{old('linkdin')}}" placeholder="Linkdin Link">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="">Git Link</label>
+                          <input type="text" name="git" class="form-control" value="{{old('git')}}" placeholder="Git Link">
                         </div>
 
                         <div class="form-group">

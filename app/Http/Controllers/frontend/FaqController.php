@@ -11,7 +11,7 @@ class FaqController extends Controller
     //
     public function Faq_Page()
     {
-        $faq = Faq::where('status', 1)->orderBy('id', 'DESC')->get();
+        $faq = Faq::where('status', 1)->get();
         return view('frontend.pages.faq.faq', compact('faq'));
     } //end
 }
